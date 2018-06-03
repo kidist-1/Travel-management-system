@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class TravelMS 
 {
       public static void main(String[] args) {
+         
+      BookPackage B= new BookPackage();
+    
        
       Scanner inp=new Scanner(System.in);
       PackageDetails P = new PackageDetails();
@@ -24,7 +27,8 @@ public class TravelMS
                         break;
                        }
               case 2: {
-                    
+                         B.customerDetails();
+                         break;
                       }
               
               case 5: break exit;
