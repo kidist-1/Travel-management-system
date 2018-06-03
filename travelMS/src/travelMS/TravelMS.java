@@ -23,6 +23,9 @@ public class TravelMS
                         P.travelMode();
                         break;
                        }
+              case 2: {
+                    
+                      }
               
               case 5: break exit;
           }
