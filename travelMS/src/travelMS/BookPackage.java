@@ -38,7 +38,45 @@ public class BookPackage {
         pamt=pamt+amt;
         return pamt;
     }
-    
+    public double bookBus(double bamt)
+    {
+        tamt=tamt+bamt;
+        return bamt;
+    }
+     public double bookTrain(double tramt)
+    {
+        tamt=tamt+tramt;
+        return tramt;
+    }
+      public double bookFlight(double famt)
+    {
+        tamt=tamt+famt;
+        return famt;
+    }
+      public void bookTravelMode(double bamt,double tramt,double famt)
+      {
+          System.out.println("Ënter the travel mode : 1.Bus\t 2.Train\t 3.Flight");
+          Scanner inp=new Scanner(System.in);
+          int mode=inp.nextInt();
+          switch(mode)
+          {
+              case 1:{
+                        System.out.println("Travel Expenses :"+bookBus(bamt));
+                        break;
+                     }
+              case 2:{
+                        System.out.println("Travel Expenses :"+bookTrain(tramt));
+                        break;
+                     }
+              case 3:{
+                        System.out.println("Travel Expenses :"+bookFlight(famt));
+                        break;
+                     }
+               
+              }
+                
+          }
+      
     public void customerDetails()
     {
        
