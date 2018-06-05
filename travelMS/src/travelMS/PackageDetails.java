@@ -7,7 +7,8 @@ package travelMS;
 
 import java.util.Scanner;
 
-public class PackageDetails {
+public class PackageDetails 
+{
     
     public void details()
     {
@@ -22,7 +23,7 @@ public class PackageDetails {
         System.out.println("5.Ladakh"
                 + "  Starting from Rs.15,500");
      
-        System.out.println("NOTE: All the packages restricted to 2 members only!");
+        System.out.println("NOTE: All the packages are for 2 members!!");
     }
     
     public void travelMode()

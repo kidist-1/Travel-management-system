@@ -1,13 +1,12 @@
-
 package travelMS;
 import java.util.Scanner;
-
-public class BookPackage {
-    
+public class BookPackage 
+{
     double pamt;        //package amount
     double tamt;        // travel mode amount
     String name;
     int age;
+    double total_package;
     
     public double bookManali(double amt)
     {
@@ -38,9 +37,7 @@ public class BookPackage {
         pamt=pamt+amt;
         return pamt;
     }
-    
-
-    
+ 
     public double bookBus(double bamt)
     {
         tamt=tamt+bamt;
@@ -56,89 +53,57 @@ public class BookPackage {
         tamt=tamt+famt;
         return tamt;
     }
-      public void bookTravelMode(double bamt,double tramt,double famt)
-      {
+    public double bookTravelMode(double bamt,double tramt,double famt)
+    {
           System.out.println("Ënter the travel mode : 1.Bus\t 2.Train\t 3.Flight");
           Scanner inp=new Scanner(System.in);
           int mode=inp.nextInt();
-          switch(mode)
-          {
-              case 1:{
-                        System.out.println("Travel Expenses :"+bookBus(bamt));
-                        break;
-                     }
-              case 2:{
-                        System.out.println("Travel Expenses :"+bookTrain(tramt));
-                        break;
-                     }
-              case 3:{
-                        System.out.println("Travel Expenses :"+bookFlight(famt));
-                        break;
-                     }
-               
-              }
-                
-          }
-      
-    public void customerDetails()
+          if(mode==1)
+              return bookBus(bamt);
+          else if(mode==2)
+                return bookTrain(tramt);
+          else if(mode==3)
+               return bookFlight(famt);
+          else
+              return 0;
+    }
+    public double customerDetails(double total_package)
     {
-       
         Scanner inp = new Scanner(System.in);
         System.out.println("Enter the package you want to book:");
         int ch= inp.nextInt();
-
         System.out.println("Enter the name:");
         name=inp.next();
         System.out.println("Enter the age:");
         age=inp.nextInt();
-        
         switch(ch)
         {
             case 1: {
-                        System.out.println("Successfully Booked the package for Manali! "
-                                + "Package expenses:" +bookManali(5500));
-                        bookTravelMode(3500,1800,10000);
-                        
-                        break;
+                        total_package=bookTravelMode(3500,1800,10000)+bookManali(5500);
+                        return total_package;
                     }
            
             case 2: {
-                       
-                        System.out.println("Successfully Booked the package for Andaman! "
-                                + "Package expenses:" +bookAndaman(20500));
-                        bookTravelMode(5500,3800,12000);
-                        break;
+                        total_package=bookTravelMode(5500,3800,12000)+bookAndaman(20500);
+                        return total_package;
+                        
                     }
             case 3: {
-                       
-                        System.out.println("Successfully Booked the package for Goa! "
-                                + "Package expenses:" +bookGoa(5999));
-                        bookTravelMode(3000,2000,5000);
-                        break;
+                        total_package=bookTravelMode(3000,2000,5000)+bookGoa(5999);
+                        return total_package;
                     }
             case 4: {
-                        
-                        System.out.println("Successfully Booked the package for Ooty! "
-                                + "Package expenses:" +bookOoty(8499));
-                        bookTravelMode(4500,2800,8499);
-                        break;
+                        total_package=bookTravelMode(4500,2800,8499)+bookOoty(8499);
+                        return total_package;
                     }
-            
             case 5: {
-                        
-                        System.out.println("Successfully Booked the package for Ladakh! "
-                                + "Package expenses:" +bookLadakh(15500));
-                        bookTravelMode(8000,4500,12000);
-                        break;
+                        total_package= bookTravelMode(8000,4500,12000)+bookLadakh(15500);
+                        return total_package;
                     }
-            
-            
-            }
-         }
-        
-        
-        
-        
-        
+            default:return 0;
+           
+        }
     }
+   
+}
 

@@ -16,7 +16,8 @@ import static org.junit.Assert.*;
  *
  * @author SHREE SHANTERI
  */
-public class TestBook {
+public class TestBook
+{
     
     BookPackage B;
     public TestBook() {
@@ -50,10 +51,11 @@ public class TestBook {
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-     public void TestBookManali() {
+     public void TestBookManali() 
+     {
          assertEquals(5500.0,B.bookManali(5500.0),0.01);
          assertEquals(11000.0,B.bookManali(5500.0),0.01);
-         
+        
          
      }
 }
