@@ -38,6 +38,37 @@ public class BookPackage {
         pamt=pamt+amt;
         return pamt;
     }
+    
+    public double bookBus(double bamt)
+    {
+        tamt=tamt+bamt;
+        return tamt;
+    }
+    
+    public void bookTravelMode(double bamt, double tramt, double famt)
+    {
+        System.out.println("Enter the travel mode: 1.Bus 2.Train 3.Flight");
+        Scanner inp=new Scanner(System.in);
+        int mode = inp.nextInt();
+        switch(mode)
+        {
+            case 1: {
+                          System.out.println("Travel expenses: "+bookBus(bamt));
+                         break;
+                    }
+            
+           case 2: {
+                          System.out.println("Travel expenses: "+bookTrain(tramt));
+                         break;
+                    }
+            
+           case 3: {
+                          System.out.println("Travel expenses: "+bookFlight(famt));
+                         break;
+                 }
+        }
+    }
+    
     public double bookBus(double bamt)
     {
         tamt=tamt+bamt;
@@ -93,39 +124,45 @@ public class BookPackage {
         {
             case 1: {
                         System.out.println("Successfully Booked the package for Manali! "
-                                + "Transaction amount:" +bookManali(5500));
+                                + "Package expenses:" +bookManali(5500));
+                        bookTravelMode(3500,1800,10000);
+                        
                         break;
                     }
            
             case 2: {
                        
                         System.out.println("Successfully Booked the package for Andaman! "
-                                + "Transaction amount:" +bookAndaman(20500));
+                                + "Package expenses:" +bookAndaman(20500));
+                        bookTravelMode(5500,3800,12000);
                         break;
                     }
             case 3: {
                        
                         System.out.println("Successfully Booked the package for Goa! "
-                                + "Transaction amount:" +bookGoa(5999));
+                                + "Package expenses:" +bookGoa(5999));
+                        bookTravelMode(3000,2000,5000);
                         break;
                     }
             case 4: {
                         
                         System.out.println("Successfully Booked the package for Ooty! "
-                                + "Transaction amount:" +bookOoty(8499));
+                                + "Package expenses:" +bookOoty(8499));
+                        bookTravelMode(4500,2800,8499);
                         break;
                     }
             
             case 5: {
                         
                         System.out.println("Successfully Booked the package for Ladakh! "
-                                + "Transaction amount:" +bookLadakh(15500));
+                                + "Package expenses:" +bookLadakh(15500));
+                        bookTravelMode(8000,4500,12000);
                         break;
                     }
             
             
             }
-        }
+         }
         
         
         
