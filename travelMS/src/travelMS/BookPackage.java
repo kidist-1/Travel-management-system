@@ -4,7 +4,7 @@ public class BookPackage
 {
     double pamt;        //package amount
     double tamt;        // travel mode amount
-    String name;
+    String name;        //to store name of the customer
     int age;
     double total_package;
     
