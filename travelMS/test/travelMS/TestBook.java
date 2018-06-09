@@ -34,13 +34,13 @@ public class TestBook
     @Before
     public void setUp() {
         B= new BookPackage();
-       /* BookPackage B[] = new BookPackage[20];
+       BookPackage[] B = new BookPackage[20];
         int i;
         
         for(i=0; i<B.length; i++)
         {
             B[i]=new BookPackage();
-        }*/
+        }
     }
     
     @After
@@ -55,7 +55,7 @@ public class TestBook
      {
          assertEquals(5500.0,B.bookManali(5500.0),0.01);
          assertEquals(11000.0,B.bookManali(5500.0),0.01);
-        
+         
          
      }
 }

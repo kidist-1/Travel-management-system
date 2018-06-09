@@ -17,9 +17,10 @@ public class Billing extends BookPackage
     {
         System.out.println("The total_amt:: " +df2.format(total_package));
         
-        rate=(total_package*12)/112;
+        GST=(total_package*12)/112;
+        rate=total_package-GST;
         System.out.println("The Rate::" +df2.format(rate));
-        GST=total_package-rate;
+        
         return GST;
     }
 }
