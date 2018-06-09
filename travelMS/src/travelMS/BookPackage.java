@@ -67,6 +67,7 @@ public class BookPackage
           else
               return 0;
     }
+    
     public double customerDetails(double total_package)
     {
         Scanner inp = new Scanner(System.in);
@@ -104,6 +105,6 @@ public class BookPackage
            
         }
     }
-   
+    
 }
 
