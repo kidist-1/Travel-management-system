@@ -53,11 +53,13 @@ public class BookPackage
         tamt=tamt+famt;
         return tamt;
     }
+      
     public double bookTravelMode(double bamt,double tramt,double famt)
     {
           System.out.println("Ënter the travel mode : 1.Bus\t 2.Train\t 3.Flight");
           Scanner inp=new Scanner(System.in);
           int mode=inp.nextInt();
+          
           if(mode==1)
               return bookBus(bamt);
           else if(mode==2)
@@ -68,11 +70,13 @@ public class BookPackage
               return 0;
     }
     
-    public double customerDetails(double total_package)
+    public double customerDetails()
     {
         Scanner inp = new Scanner(System.in);
+       
         System.out.println("Enter the package you want to book:");
         int ch= inp.nextInt();
+       
         System.out.println("Enter the name:");
         name=inp.next();
         System.out.println("Enter the age:");

@@ -18,8 +18,8 @@ public class Billing
         System.out.println("The total_amt = " +df2.format(total_package));
         
         GST=(total_package*12)/112;
-        rate=total_package-GST;
-        System.out.println("The Rate = " +df2.format(rate));
+        rate=total_package+GST;
+        System.out.println("The Total amount with GST = " +df2.format(rate));
         
         return GST;
     }
