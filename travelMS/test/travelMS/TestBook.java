@@ -35,13 +35,13 @@ public class TestBook
     public void setUp() 
     {
         B= new BookPackage();
-       BookPackage[] B = new BookPackage[20];
+      /* BookPackage[] B = new BookPackage[20];
         int i;
         
         for(i=0; i<B.length; i++)
         {
             B[i]=new BookPackage();
-        }
+        }*/
     }
     
     @After

@@ -19,6 +19,7 @@ import static org.junit.Assert.*;
  */
 public class TestBilling {
     
+    Billing B;
     public TestBilling() {
     }
     
@@ -35,14 +36,9 @@ public class TestBilling {
     @Before
     public void setUp() 
     {
-        B=new Billing();
-        Billing[] B= new Billing[20];
-        int i;
         
-        for(i=0; i<B.length; i++)
-        {
-            B[i]=new Billing();
-        }
+        B= new Billing();
+       
     }
     
     @After
