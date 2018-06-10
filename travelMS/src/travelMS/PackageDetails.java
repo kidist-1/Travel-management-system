@@ -9,7 +9,9 @@ import java.util.Scanner;
 
 public class PackageDetails 
 {
-    
+    /**
+     * this method is used to display details of the packages available.
+     */
     public void details()
     {
         System.out.println("1.Manali"
@@ -26,6 +28,9 @@ public class PackageDetails
         System.out.println("NOTE: All the packages are for 2 members!!");
     }
     
+    /**
+     * this method is used to display the details of the traveling mode.
+     */
     public void travelMode()
     {
         Scanner inp=new Scanner(System.in);
