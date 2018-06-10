@@ -32,7 +32,8 @@ public class TestBook
     }
     
     @Before
-    public void setUp() {
+    public void setUp() 
+    {
         B= new BookPackage();
        BookPackage[] B = new BookPackage[20];
         int i;
@@ -58,4 +59,60 @@ public class TestBook
          
          
      }
+     
+     @Test
+     public void TestBookAndaman() 
+     {
+         assertEquals(20500.0,B.bookAndaman(20500.0),0.01);
+         assertEquals(41000.0,B.bookAndaman(20500.0),0.01);
+         
+         
+     }
+     
+     @Test
+     public void TestBookGoa() 
+     {
+         assertEquals(5999.0,B.bookGoa(5999.0),0.01);
+         assertEquals(11998.0,B.bookGoa(5999.0),0.01);
+         
+         
+     }
+     
+     @Test
+     public void TestBookOoty() 
+     {
+         assertEquals(8499.0,B.bookOoty(8499.0),0.01);
+         assertEquals(16998.0,B.bookOoty(8499.0),0.01);
+         
+         
+     }
+     
+     @Test
+     public void TestBookLadakh() 
+     {
+         assertEquals(15500.0,B.bookLadakh(15500.0),0.01);
+         assertEquals(31000.0,B.bookLadakh(15500.0),0.01);
+         
+         
+     }
+     
+     @Test
+     public void TestbookBus()
+    {
+ 
+         assertEquals(3500.0,B.bookBus(3500.0),0.01);
+         
+    }
+     
+     @Test
+     public void TestbookTrain()
+    {
+        assertEquals(1800.0,B.bookTrain(1800.0),0.01);
+    }
+     
+     @Test
+      public void TestbookFlight()
+    {
+        assertEquals(10000.0,B.bookTrain(10000.0),0.01);
+    }
 }

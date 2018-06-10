@@ -15,15 +15,17 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author shahy
+ * @author User
  */
-public class TestTravelMS {
+public class TestBilling {
     
-    public TestTravelMS() {
+    public TestBilling() {
     }
     
     @BeforeClass
-    public static void setUpClass() {
+    public static void setUpClass() 
+    {
+       
     }
     
     @AfterClass
@@ -31,7 +33,16 @@ public class TestTravelMS {
     }
     
     @Before
-    public void setUp() {
+    public void setUp() 
+    {
+        B=new Billing();
+        Billing[] B= new Billing[20];
+        int i;
+        
+        for(i=0; i<B.length; i++)
+        {
+            B[i]=new Billing();
+        }
     }
     
     @After
@@ -41,6 +52,10 @@ public class TestTravelMS {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void TestGST_calculate()
+    {
+         assertEquals(964.2857,B.GST_calculate(9000.0,0,0),0.01);
+
+    }
 }
