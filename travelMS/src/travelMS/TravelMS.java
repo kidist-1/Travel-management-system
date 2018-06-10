@@ -22,7 +22,6 @@ public class TravelMS
         }
         Scanner inp=new Scanner(System.in);
         PackageDetails P = new PackageDetails();
-        CancelPackage C=new CancelPackage();
         int choice;
      
         exit:
@@ -49,6 +48,7 @@ public class TravelMS
                         break;
                         
                      }
+                  
                case 3: break exit;
                
               default:System.out.println("Invalid choice entered!!!!");

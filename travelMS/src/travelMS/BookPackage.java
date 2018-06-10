@@ -7,6 +7,7 @@ public class BookPackage
     String name;        //to store name of the customer
     int age;
     double total_package;
+    long phone;
     
     public double bookManali(double amt)
     {
@@ -71,12 +72,15 @@ public class BookPackage
     public double customerDetails(double total_package)
     {
         Scanner inp = new Scanner(System.in);
-        System.out.println("Enter the package you want to book:");
+        System.out.println("Enter the package you want to book: 1.Manali 2.Andaman 3.Goa 4.Ooty 5.Ladakh ");
         int ch= inp.nextInt();
         System.out.println("Enter the name:");
         name=inp.next();
         System.out.println("Enter the age:");
         age=inp.nextInt();
+        System.out.println("Enter the contact number :");
+        phone=inp.nextLong();     
+
         switch(ch)
         {
             case 1: {
