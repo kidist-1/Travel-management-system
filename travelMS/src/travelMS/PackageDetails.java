@@ -78,6 +78,8 @@ public class PackageDetails
                       System.out.println("Flight- Starting from Rs.12,000");
                       break;
                     }
+            default:
+                System.out.println("Invalid choice!!");
         }
         
     }

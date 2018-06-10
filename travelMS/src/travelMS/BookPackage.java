@@ -105,10 +105,14 @@ public class BookPackage
       * @return 
       */
     public double bookTravelMode(double bamt,double tramt,double famt)
-    {
+    {   
+        int mode;
+        do
+        {
+          
           System.out.println("Ënter the travel mode : 1.Bus\t 2.Train\t 3.Flight");
           Scanner inp=new Scanner(System.in);
-          int mode=inp.nextInt();
+           mode=inp.nextInt();
           
           if(mode==1)
               return bookBus(bamt);
@@ -116,8 +120,10 @@ public class BookPackage
                 return bookTrain(tramt);
           else if(mode==3)
                return bookFlight(famt);
-          else
-              return 0;
+          
+        }while(mode>3);
+         return 0;
+              
     }
     
     
